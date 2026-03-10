@@ -1,6 +1,9 @@
+// how express works
+
 const express = require('express');
 const app = express();
 const port = 3200;
+// console.log(app);
 
 app.get('/', (req, res) => {
   res.send('This is Home Page');
