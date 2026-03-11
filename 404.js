@@ -5,6 +5,8 @@ import aboutPage from "./pages/about.js";
 import {contactPage} from "./pages/home.js";
 import path from "path";
 const app = express();
+const pagesPath = path.resolve("pages");
+app.use(express.static(pagesPath));
 app.get('/', (req, res) => {
   res.send(homePage());
 });
