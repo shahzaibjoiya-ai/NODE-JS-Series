@@ -14,4 +14,14 @@ app.post ('/submit_users', (req, res) => {
     console.log(req.body);
     res.render('submitUser',req.body);
 }   );
+// loops and arrays
+app.get ('/users', (req, res) => {
+    
+    const users = [
+        { name: 'John', age: 30 },
+        { name: 'Jane', age: 25 },
+        { name: 'Bob', age: 40 }
+    ];
+    res.render('users', { users: users, isLogin: true });
+});
 app.listen(3200);
